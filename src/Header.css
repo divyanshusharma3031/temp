@@ -1,0 +1,104 @@
+*, *::before, *::after{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+#navbar{
+    height:29vh;
+    width: 100vw;
+    background-color: #222327;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#nav{
+    list-style: none;
+    width:36rem;
+    height: 6rem;
+    padding-right:1rem;
+    padding-left: 2.5rem;
+    background-color: white;
+    border-radius: 12px;
+}
+#navbar li{
+    height:5.5rem;
+    width:10.6rem;
+    display: inline-block;
+}
+#navbar a{
+    text-decoration: none;
+    color: black;
+     display: flex; 
+     justify-content: center;
+     height:5.5rem;
+    width:6rem;
+    text-align: center;
+}
+
+.icon{
+    position: absolute;
+    top:5.1rem;
+    font-size:2.5rem;
+    transition-property: transform;
+    transition-duration:0.5s;
+}
+.text{
+    position: absolute;
+    top: 8rem;
+    /* font-family: 'Lobster Two', cursive; */
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    transition-property: transform;
+    transition-duration:0.5s;
+    
+    transform:translateY(1.65rem);
+    color:#222327;
+}
+.text.active{
+    transform:translateY(-1.05rem);
+}
+.indicator{
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    background-color: #29fd53;
+    box-shadow: 0 0 0 0.55rem #222327;
+    border-radius: 50%;
+    top: 1rem;
+    transition-duration: 0.5s;
+}
+.block.active .icon{
+    transform: translateY(-93%);
+    z-index: 2;
+}
+.indicator::before{
+    content: '';
+    position: absolute;
+    top: 25.9px;
+    left: -33.8px;
+    width: 31px;
+    height: 30px;
+    box-shadow: 1.5px -13px #222327;
+    border-top-right-radius: 100%;
+}
+.indicator::after {
+    content: '';
+    position: absolute;
+    top: 25.9px;
+    right: -33.8px;
+    width: 31px;
+    height: 30px;
+    box-shadow: -1.5px -13px #222327;
+    border-top-left-radius: 100%;
+}
+#home.active ~.indicator{
+    transform: translateX(calc(0.42rem));
+}
+#aboutus.active ~.indicator{
+    transform: translateX(calc(11rem));
+}
+
+#contact.active ~.indicator{
+    transform: translateX(21.7rem);
+}
+
