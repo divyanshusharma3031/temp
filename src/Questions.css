@@ -14,7 +14,7 @@
     position: relative;
     top:10rem;
     justify-content: center;
-    margin-bottom: 2rem;
+    /* margin-bottom: 2rem; */
     /* overflow: hidden; */
 }
 .list1{
@@ -88,6 +88,20 @@
     border:1px solid orange;
     /* background-color: pink; 
 } */
+
 #space{
     height:0.7rem;
+}
+footer{
+    /* position:relative;
+    top:3rem; */
+    display: flex;
+    height: 3rem;
+    align-items: center;
+    justify-content: center;
+    background-color:#222327;
+    font-size:18px;
+    color:white;
+    position:relative;
+    top:8.5rem;
 }
